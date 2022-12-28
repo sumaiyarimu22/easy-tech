@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #f9fafb;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-radius: 5px;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.nav-link:hover:after {
+  width: 100%;
+}
