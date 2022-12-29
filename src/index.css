@@ -6,8 +6,13 @@
 
 body {
   font-family: "poppins", sans-serif;
-  overflow-x: hidden;
 }
+
+html,
+body {
+  overflow: hidden;
+}
+/* navbar */
 .nav-link {
   position: relative;
 }
@@ -26,4 +31,21 @@ body {
 }
 .nav-link:hover:after {
   width: 100%;
+}
+/* navbar end */
+
+/* slider */
+.slider {
+  height: calc(100vh - 5rem);
+  width: 500vw;
+  display: flex;
+  /* transform: translateX(-100vw); */
+  transition: 1s;
+}
+.slide {
+  width: 100vw;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
