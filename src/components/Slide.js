@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Slide = ({ image }) => {
   return (
     <div className="slide" style={{ backgroundImage: `url(${image.src})` }}>
-      <div className="slide-texts container mx-auto flex flex-col items-start justify-center h-full gap-5 text-gray-600">
+      <div className="slide-texts container mx-auto flex flex-col items-start justify-center h-full gap-5 text-gray-400">
         <h1 className="text-7xl uppercase font-semibold space-font w-4/5">
           {image.headline}
         </h1>

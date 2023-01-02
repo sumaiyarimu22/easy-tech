@@ -11,8 +11,14 @@ body {
 
 html,
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
+/* Utilities */
+.space-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 /* navbar */
 .nav-link {
   position: relative;
