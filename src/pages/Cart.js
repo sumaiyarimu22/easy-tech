@@ -3,6 +3,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
+  addToCart,
   clearCart,
   decreaseCart,
   removeFromCart,
@@ -19,6 +20,10 @@ const Cart = () => {
 
   const handleDecrease = (product) => {
     dispatch(decreaseCart(product));
+  };
+
+  const handleIncrease = (product) => {
+    dispatch(addToCart(product));
   };
 
   return (
@@ -88,7 +93,10 @@ const Cart = () => {
                     <span className="h-10 w-10 bg-gray-100 flex justify-center items-center border border-gray-300">
                       {product.cartQuantity}
                     </span>
-                    <button className="h-10 w-10 bg-gray-100 border border-gray-300 active:bg-gray-700 active:text-gray-50">
+                    <button
+                      onClick={() => handleIncrease(product)}
+                      className="h-10 w-10 bg-gray-100 border border-gray-300 active:bg-gray-700 active:text-gray-50"
+                    >
                       +
                     </button>
                   </div>
