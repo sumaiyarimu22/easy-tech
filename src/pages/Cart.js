@@ -29,7 +29,9 @@ const Cart = () => {
   return (
     <div className="cart-section container mx-auto py-10">
       <h2 className="section-title uppercase text-2xl font-bold text-center space-font mb-10">
-        {data.length > 0 ? " Your Cart" : "cart is empty"}
+        {data.length > 0
+          ? `You have added (${data.length}) item${data.length > 1 ? "s" : ""}`
+          : "Your cart is empty"}
       </h2>
       <div className="text-center">
         {data.length === 0 && (
@@ -101,7 +103,7 @@ const Cart = () => {
                     </button>
                   </div>
                   <div className="total-price ml-auto">
-                    {currencyFormatter(product.price)}
+                    {currencyFormatter(product.price * product.cartQuantity)}
                   </div>
                 </div>
               ))}

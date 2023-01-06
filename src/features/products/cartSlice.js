@@ -63,6 +63,12 @@ const cartSlice = createSlice({
       // update local storage
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
+
+    //subTotal
+    // reduce(acc,value,index,arr)
+    getSubTotal(state, action) {
+      const subTotal = state.cartItem.reduce((acc, value) => {});
+    },
   },
 });
 
