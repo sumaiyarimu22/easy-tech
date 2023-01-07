@@ -76,7 +76,7 @@ const Slider = () => {
       <div className="btns absolute left-0 right-0 bottom-20 m-auto w-fit z-[1] text-2xl flex gap-10">
         <button
           onClick={prevSlide}
-          className="prev-btn h-14 w-20 flex justify-center items-center hover:bg-cyan-900 hover:text-cyan-200 border-1 hover:border-cyan-200 bg-teal-600 text-teal-200 border-teal-200 duration-300"
+          className="prev-btn lg:h-14 lg:w-20 md:h-10 md:w-12 sm:h-10 sm:w-10 flex justify-center items-center hover:bg-cyan-900 hover:text-cyan-200 border-1 hover:border-cyan-200 bg-teal-600 text-teal-200 border-teal-200 duration-300"
         >
           <span>
             <GoChevronLeft />
@@ -84,7 +84,7 @@ const Slider = () => {
         </button>
         <button
           onClick={nextSlide}
-          className="next-btn  h-14 w-20 flex justify-center items-center hover:bg-cyan-900 hover:text-cyan-200 border-1 hover:border-cyan-200 bg-teal-600 text-teal-200 border-teal-200 duration-300"
+          className="next-btn lg:h-14 lg:w-20 md:h-10 md:w-12 sm:h-10 sm:w-10 flex justify-center items-center hover:bg-cyan-900 hover:text-cyan-200 border-1 hover:border-cyan-200 bg-teal-600 text-teal-200 border-teal-200 duration-300"
         >
           <span>
             <GoChevronRight />

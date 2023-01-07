@@ -6,11 +6,15 @@ import {
   addToCart,
   clearCart,
   decreaseCart,
+  getSubTotal,
   removeFromCart,
 } from "../features/products/cartSlice";
+import { useEffect } from "react";
 
 const Cart = () => {
-  const { cartItem: data } = useSelector((state) => state.cart);
+  const { cartItem: data, cartTotalAmount: subtotal } = useSelector(
+    (state) => state.cart
+  );
 
   const dispatch = useDispatch();
 
@@ -25,6 +29,10 @@ const Cart = () => {
   const handleIncrease = (product) => {
     dispatch(addToCart(product));
   };
+
+  useEffect(() => {
+    dispatch(getSubTotal());
+  }, [data, dispatch]);
 
   return (
     <div className="cart-section container mx-auto py-10">
@@ -119,7 +127,9 @@ const Cart = () => {
             <div className="flex flex-col items-start gap-2">
               <div className="top flex justify-between w-full text-2xl font-medium">
                 <span className="text-sky-500">Subtotal</span>
-                <span className="text-rose-500">999</span>
+                <span className="text-rose-500">
+                  {currencyFormatter(subtotal)}
+                </span>
               </div>
               <p className="text-gray-400">
                 taxes and shopping costs are calculated at the checkout

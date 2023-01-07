@@ -5,14 +5,14 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const { cartItem } = useSelector((state) => state.cart);
   return (
-    <div className="navbar-bg bg-cyan-900  text-cyan-50 h-20 flex justify-center items-center">
+    <div className="navbar-bg bg-cyan-900 text-cyan-50 h-20 flex justify-center items-center">
       <div className="navbar container mx-auto flex items-center justify-between">
         <div className="left">
-          <span className="text-xl font-semibold">
+          <span className="text-2xl italic font-semibold">
             easy<span className="text-teal-500">Tech</span>
           </span>
         </div>
-        <div className="right flex items-center gap-5">
+        <div className="right flex items-center gap-5 mx-5">
           <Link to="/" className="nav-link">
             Home
           </Link>
