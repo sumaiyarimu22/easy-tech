@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 const Slide = ({ image }) => {
   return (
-    <div className="slide" style={{ backgroundImage: `url(${image.src})` }}>
-      <div className="slide-texts sm:mx-5 container mx-auto flex flex-col items-start justify-center h-full gap-5 text-gray-400">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl  uppercase font-semibold space-font w-4/5">
+    <div
+      className="slide relative"
+      style={{ backgroundImage: `url(${image.src})` }}
+    >
+      <div className="slide-texts sm:mx-5 container mx-auto flex flex-col items-start justify-center h-full gap-5 text-gray-800">
+        <h1 className="text-2xl sm:text-3xl  lg:text-5xl 2xl:text-7xl  uppercase font-semibold space-font w-4/5">
           {image.headline}
         </h1>
-        <p className="w-3/5  md:text-sm text-xs sm:w-4/5 md:w-3/5">
+        <p className="w-3/5  md:text-base text-xs sm:w-4/5 md:w-3/5">
           {image.body}
         </p>
         <Link
@@ -18,6 +21,7 @@ const Slide = ({ image }) => {
           </span>
         </Link>
       </div>
+      <div className="absolute top-0 left-0 z-[1] bg-gradient-to-t from-black/70 to-transparent w-full h-full "></div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Card = ({ product }) => {
   };
 
   return (
-    <div className="product flex flex-col gap-2 shadow-md bg-white rounded-xl overflow-hidden hover:-translate-y-5 duration-300 hover:shadow-2xl">
+    <div className="product flex flex-col gap-2 hover:shadow-md bg-white rounded-xl overflow-hidden ">
       <div className="img">
         <img src={product.image} alt={product.title} />
       </div>
