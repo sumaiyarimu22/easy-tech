@@ -12,7 +12,9 @@ const initialState = {
 export const productFetching = createAsyncThunk(
   "products/productFetching",
   async () => {
-    const res = await axios.get(`${process.env.REACT_BASE_URL}/api/products`);
+    const res = await axios.get(
+      "https://easy-tech-server.onrender.com/api/products"
+    );
     return res.data;
   }
 );
