@@ -1,6 +1,6 @@
 # easy-tech
 
-Easy-tech is an online e-commerce store built with a focus on simplicity and user experience. With this project, we aim to provide a seamless shopping experience for customers, allowing them to easily browse and purchase products with ease.
+In this MERN stack project, you will build a full-fledged e-commerce app using MongoDB as the database, Express.js as the backend framework, React for the frontend  development. With the integration of MongoDB, you can store and manage product data, user information, and order details, making it a scalable and dynamic e-commerce solution. Additionally, you'll incorporate Redux for state management and Tailwind CSS for styling to create an intuitive and visually appealing user interface.
 
 ## Project Description
 
