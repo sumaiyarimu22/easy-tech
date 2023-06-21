@@ -14,7 +14,7 @@ const cartSlice = createSlice({
     addToCart(state, action) {
       //check if the item is already in the cart
       const existedItemIndex = state.cartItem.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.name === action.payload.name
       );
 
       //if exist
@@ -54,7 +54,7 @@ const cartSlice = createSlice({
     //remove
     removeFromCart(state, action) {
       const updatedCartItem = state.cartItem.filter(
-        (item) => item.id !== action.payload.id
+        (item) => item.name !== action.payload.name
       );
       state.cartItem = updatedCartItem;
 
@@ -94,7 +94,7 @@ const cartSlice = createSlice({
     //quantity decrease
     decreaseCart(state, action) {
       const itemIndex = state.cartItem.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.name === action.payload.name
       );
       //if exist
       if (state.cartItem[itemIndex].cartQuantity > 1) {
@@ -112,7 +112,7 @@ const cartSlice = createSlice({
         });
       } else if (state.cartItem[itemIndex].cartQuantity === 1) {
         const updatedCartItem = state.cartItem.filter(
-          (item) => item.id !== action.payload.id
+          (item) => item.name !== action.payload.name
         );
         state.cartItem = updatedCartItem;
 
@@ -126,6 +126,7 @@ const cartSlice = createSlice({
           progress: undefined,
           theme: "light",
         });
+
       }
       // update local storage
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
